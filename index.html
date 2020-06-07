@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tarjetes_flexbox</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            min-height: 100%;
+        }
+        img{
+            width: 100%;
+        }
+        body{
+            font-family: "georgia" cursive;
+            font-size: 18px;
+            background: linear-gradient(38deg,#FFBF00,#178998,#FE642E);
+            color: darkblue;
+        }
+        .container{
+            display:flex;
+            flex-direction: row;
+            padding: 2em 4em;
+            justify-content: center;
+            border-radius: 20px;
+        }
+        .dissenyador{
+            width: 20em;
+            margin: 1em;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 10px 10px 25px #0a0714 ;
+            border-radius: 20px;
+            display:flex; 
+            flex-direction: column;
+        }
+        .dissenyador_img{
+            overflow: hidden;
+            width: 100%;
+            height: 400px;
+            background: blue;
+            border-radius: 20px 20px 0 0;
+            
+        }
+        .dissenyador_img img{
+           border-radius: 20px 20px 0 0;
+            height: 100%;
+            object-fit: cover;
+            mix-blend-mode: luminosity;
+            
+        }
+        .dissenyador:first-child .dissenyador_img img{
+            object-position: right;
+        }
+        .dissenyador:last-child .dissenyador_img img{
+            object-position: center;
+        }
+        header{
+            display: flex;
+            margin: 0.5em 1em;
+            justify-content:space-between;
+            border-bottom: 1px solid orange;
+            align-items: baseline,
+        }
+        h3{
+            font-style: italic;
+            font-weight: bold;
+        }
+        span{
+            font-style: normal;
+            font-weight: lighter;
+            font-size: 1em;
+        }
+        .dissenyador_contingut{
+            flex-grow: 1;
+            text-align: justify;
+            hyphens: auto;
+            margin:1em 1em  0.5em 1em;
+            font-size: 0.9em;
+            line-height: 1.4em;
+        }
+        footer{
+            background: orange;
+            color: white;
+            font-size: 0.9;
+            font-style: italic;
+            border-radius: 0 0 20px 20px;
+            padding: 0.6em;
+        }
+        @media (max-width:700px){
+            body{
+                font-size: 16px;
+            }
+            .container{
+                 flex-direction:column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dissenyador">
+           <div class="dissenyador_img">
+              <img src="img/carson2.jpg" alt="David Carson">
+           </div>
+           <header>
+               <h3>David Carson</h3>
+               <span>1955</span>
+           </header>
+           <p class="dissenyador_contingut">
+              Carson graduated with “honors and distinction” from San Diego state university, where he received a BFA degree in sociology. A former professional surfer, he was ranked #9 in the world during his college days. Numerous groups including the New York Type Directors Club, American Center for Design and I.D. magazine have recognized his studio’s work with a wide range of clients in both the business and arts worlds. Carson and his work have been featured in over 180 magazine and newspaper articles around the world, including a feature in Newsweek magazine, and a front page article in the new york times . London-based Creative Review magazine dubbed Carson “Art Director of the Era.” The American Center for Design (Chicago) called his work on Ray Gun magazine “the most important work coming out of America.” His work on Beach Culture magazine won “Best Overall Design” and “Cover of the Year” from the Society of Publication Designers in New York.Carson’s first book, with Lewis Blackwell, The End of Print, (forward by David Byrne) is the top selling graphic design book of all time, selling over 200,000 copies, and printed in 5 different languages.The work featured in The End of Print is the subject of various one-man exhibitions throughout Europe and Latin America,Asia and australia. Carson’s other titles include 2nd Sight, Fotografiks (with design historian Philip Meggs). He has two recently released books, TREK and The Book of Probes with Marshall McLuhan. David is also art director for the Mcluhan estate(“the medium is the message”).
+
+           </p>
+           <footer class="dissenyador_peu">
+               David Carson has won over 230 Awards for his work in graphic design, photography, advertising and branding. Some of these awards include: Master of Typography, Graphis magazine (NY), Designer of the Year (1998 and 1999), International Center of Photography and One of the 30 most influential Macintosh users over the 30-year history of the computer – only two graphic designers were selected, Carson and April Greiman.
+           </footer>
+    </div>
+        <div class="dissenyador">
+        <div class="dissenyador_img">
+            <img src="img/greiman.jpg" alt="April Greiman">
+        </div>
+        <header>
+            <h3>April Greiman</h3>
+            <span>1948</span>
+        </header>
+        <p class="dissenyador_contingut">
+            April Greiman  is an American designer widely recognized as one of the first designers to embrace computer technology as a design tool. Greiman is also credited, along with early collaborator Jayme Odgers, with helping to import the European New Wave design style to the US during the late 70s and early 80s." According to design historian Steven Heller, “April Greiman was a bridge between the modern and postmodern, the analog and the digital.” “She is a pivotal proponent of the ‘new typography’ and new wave that defined late twentieth-century graphic design.” Her art combines her Swiss design training with West Coast postmodernism. 
+
+
+            Greiman finds the title graphic designer too limiting and prefers to call herself a "transmedia artist". Her work has inspired designers to develop the computer as a tool of design and to be curious and searching in their design approach. Her style includes typelayering, where groups of letterforms are sandwiched and layered, but also made to float in space along with other 'objects in space' such as shapes, photos, illustrations and color swatches. She creates a sense of depth and dynamic, in particular by combining graphic elements through making extensive use of Apple Macintosh technology. Los Angeles Times called her graphic style "an experiment in creating 'hybrid imagery'. She is one of the designers belonging to the new wave that has left a very important legacy.
+        </p>
+        <footer class="dissenyador_peu">
+            Greiman has won many awards, including lifetime achievement awards from the American Institute of Graphic Arts Gold Medal in 1998. Greiman currently teaches at the University of Southern California as a Professor of Design in the Roski School of Art and Design, and previously taught at Woodbury University's School of Architecture and the Southern California Institute of Architecture (SCI-Arc). With four honorary doctorates, as one of the "ultimate risktakers" for her unorthodox and progressive approach to design by embracing new technologies. In 1995, the US Postal Service launched a stamp designed by Greiman to commemorate the Nineteenth Amendment to the United States Constitution (Women's Voting Rights)
+        </footer>
+    </div>
+    </div>
+</body>
+</html>
